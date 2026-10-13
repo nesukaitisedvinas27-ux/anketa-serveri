@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="lt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#10110f">
+	<meta name="description" content="Originalūs FiveM, dizaino ir garso resursai. VIP turinio peržiūra šiame puslapyje yra demonstracinė.">
+	<title>GARAGE — skaitmeniniai resursai</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="stytle.css">
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<div class="app-shell">
+		<aside class="sidebar" aria-label="Pagrindinė navigacija">
+			<a class="brand" href="#top" aria-label="Garage pradžia">
+				<span class="brand-mark">G<span>.</span></span>
+				<span class="brand-copy"><strong>GARAGE</strong><small>CREATOR SUPPLY</small></span>
+			</a>
+
+			<div class="side-label">KATALOGAS <span>05</span></div>
+			<nav class="category-nav" id="category-nav" aria-label="Resursų kategorijos">
+				<button class="nav-item is-active" type="button" data-category="all" aria-current="page"><span class="nav-icon">◈</span> Visi resursai <span class="nav-count" id="all-count">00</span></button>
+				<button class="nav-item" type="button" data-category="fivem"><span class="nav-icon">⌘</span> FiveM <span class="nav-count">03</span></button>
+				<button class="nav-item" type="button" data-category="design"><span class="nav-icon">▧</span> Dizainas <span class="nav-count">02</span></button>
+				<button class="nav-item" type="button" data-category="audio"><span class="nav-icon">♫</span> Garsas <span class="nav-count">02</span></button>
+				<button class="nav-item" type="button" data-category="vip"><span class="nav-icon">♛</span> VIP klubas <span class="nav-count">03</span></button>
+			</nav>
+
+			<div class="sidebar-bottom">
+				<div class="discord-card">
+					<span class="discord-dot"></span>
+					<span><strong>Discord bendruomenė</strong><small>Rolės ir naujienos</small></span>
+					<span class="card-arrow">↗</span>
+				</div>
+				<a class="discord-link" href="https://discord.gg/WFJHzeH49" target="_blank" rel="noreferrer">Atidaryti Discord <span>↗</span></a>
+				<p class="side-footnote">Originalūs kūrėjų resursai.<br>Jokių paskyrų ar nutekintų duomenų.</p>
+			</div>
+		</aside>
+
+		<main class="main-content" id="top">
+			<header class="topbar">
+				<div class="breadcrumb"><span>GARAGE</span><b>/</b><strong id="crumb-category">KATALOGAS</strong></div>
+				<div class="top-actions">
+					<label class="demo-switch" for="vip-demo">
+						<span class="switch-copy"><strong>VIP peržiūra</strong><small>tik demonstracija</small></span>
+						<input id="vip-demo" type="checkbox" role="switch" aria-label="Įjungti demonstracinę VIP peržiūrą">
+						<span class="switch-track" aria-hidden="true"><span></span></span>
+					</label>
+					<a class="top-discord" href="https://discord.gg/WFJHzeH49" target="_blank" rel="noreferrer"><span class="online-dot"></span> Discord <span class="external-arrow">↗</span></a>
+				</div>
+			</header>
+
+			<section class="hero" aria-labelledby="page-title">
+				<div class="hero-copy">
+					<div class="eyebrow"><span class="eyebrow-line"></span> SKAITMENINĖS DIRBTUVĖS <span class="eyebrow-index">LT / 01</span></div>
+					<h1 id="page-title">Susikurk<br><span>savo pasaulį.</span></h1>
+					<p>Originalūs FiveM, garso ir dizaino resursai tavo projektui. Atrinkta kūrėjų, paruošta naudoti.</p>
+					<a class="hero-cta" href="#catalog">Peržiūrėti katalogą <span>↓</span></a>
+				</div>
+				<div class="hero-art" aria-hidden="true">
+					<div class="art-grid"></div>
+					<div class="art-ring ring-one"></div>
+					<div class="art-ring ring-two"></div>
+					<div class="art-core"><span>G</span><i></i></div>
+					<div class="art-stamp">BUILT FOR<br>CREATORS <span>✳</span></div>
+					<div class="art-caption">GARAGE / RESOURCE Nº 001</div>
+					<div class="art-coordinate">54°41' N<br>25°16' E</div>
+				</div>
+			</section>
+
+			<section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+				<div class="catalog-heading">
+					<div>
+						<div class="section-kicker">ATRINKTA TAU <span>— 2026</span></div>
+						<h2 id="catalog-title">Resursų katalogas<span class="heading-period">.</span></h2>
+					</div>
+					<label class="search-box">
+						<span aria-hidden="true">⌕</span>
+						<input id="search" type="search" placeholder="Ieškoti resursų..." autocomplete="off" aria-label="Ieškoti resursų">
+						<kbd>/</kbd>
+					</label>
+				</div>
+
+				<div class="filter-row" aria-label="Katalogo filtras">
+					<span class="filter-caption">RODYTI:</span>
+					<button class="filter-chip is-selected" type="button" data-filter="all">Visi <span id="visible-count">00</span></button>
+					<button class="filter-chip" type="button" data-filter="free">Nemokami</button>
+					<button class="filter-chip" type="button" data-filter="vip">VIP</button>
+					<span class="sort-label">NAUJAUSI <span>↓</span></span>
+				</div>
+
+				<div class="product-grid" id="product-grid" aria-live="polite"></div>
+				<div class="empty-state" id="empty-state" hidden>
+					<span>⌕</span><strong>Nieko neradome</strong><p>Pabandyk kitą paieškos frazę arba kategoriją.</p>
+				</div>
+			</section>
+
+			<section class="vip-banner" aria-label="VIP klubo informacija">
+				<div class="vip-emblem" aria-hidden="true">♛</div>
+				<div class="vip-banner-copy"><span class="section-kicker">UŽ KULISŲ <span>— VIP CLUB</span></span><h2>Daugiau kūrybos.<br><em>Mažiau ribų.</em></h2></div>
+				<p>VIP rolę suteikia mūsų Discord komanda. Šiame puslapyje įjungiamas tik dizaino demonstracinis vaizdas, ne tikras paskyros teisių patikrinimas.</p>
+				<a href="https://discord.com/app" target="_blank" rel="noreferrer" class="vip-cta">Sužinoti Discord'e <span>↗</span></a>
+			</section>
+
+			<footer class="footer"><a class="footer-brand" href="#top">G<span>.</span></a><span>NEPRIKLAUSOMA KŪRĖJŲ DIRBTUVĖ</span><span>© 2026 GARAGE</span><a href="#top">Į VIRŠŲ ↑</a></footer>
+		</main>
+	</div>
+
+	<dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+		<form method="dialog"><button class="dialog-close" aria-label="Uždaryti">×</button></form>
+		<div class="dialog-art" id="dialog-art"><span id="dialog-icon"></span><span class="dialog-art-label">GARAGE RESOURCE / ORIGINAL</span></div>
+		<div class="dialog-content"><div class="section-kicker" id="dialog-kicker"></div><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-note" id="dialog-note"></div><a class="dialog-cta" href="https://discord.com/app" target="_blank" rel="noreferrer">Klausti Discord'e <span>↗</span></a></div>
+	</dialog>
+</body>
+</html>
